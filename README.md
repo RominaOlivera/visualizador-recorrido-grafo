@@ -1,46 +1,51 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Visualizador de Recorrido de Grafo
 
-## Available Scripts
+Elige tu ruta: este visualizador gráfico te permite tomar decisiones informadas mientras navegas por el grafo. Sigue el recorrido binario en tiempo real, selecciona los nodos adyacentes y observa cómo se construye la red paso a paso. Analiza estructuras complejas y optimiza tus análisis de redes con esta herramienta interactiva y fácil de usar.
 
-In the project directory, you can run:
+## Instalación
 
-### `npm start`
+Asegúrate de tener Node.js y npm (Node Package Manager) instalados en tu sistema.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Clona este repositorio en tu computadora:
+   git clone https://github.com/RominaOlivera/visualizador-grafos.git
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. Navega al directorio del proyecto:
+   cd visualizador-grafos
 
-### `npm test`
+3. Instala las dependencias necesarias:
+   npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Uso
 
-### `npm run build`
+1. Para ejecutar la aplicación en modo de desarrollo, utiliza el siguiente comando:
+   npm run start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Abre tu navegador y navega a la dirección http://localhost:3000/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Interactúa con el grafo seleccionando el nodo inicial y los nodos adyacentes hacia donde quieras recorrer la red. La aplicación mostrará los nodos visitados y el costo que ha tomado en cada recorrido binario.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Estructura del proyecto
 
-### `npm run eject`
+- `src/`: Contiene el código fuente de la aplicación.
+  - `components/`: 
+    - `Grafo.tsx`: Componente que representa visualmente el grafo y maneja la lógica del recorrido.
+    - `NodoGrafo.tsx`: Componente que representa visualmente un nodo en el grafo.
+    - `AristaGrafo.tsx`: Componente que representa visualmente una arista en el grafo.
+    - `InformacionGrafo.tsx`: Componente que muestra información relevante del recorrido binario.
+  - `interfaces/`: 
+      -`interfaces.ts` Archivo donde se definen las interfaces utilizadas para definir la estructura de datos en la aplicación.
+  - `Styles/`:  Este directorio contiene los estilos del proyecto.
+      -`Sryles.scss`: Archivo Sass que contiene los estilos utilizados en la aplicación.
+  - `RecorridoGrafos.tsx`: Componente principal que contiene y renderiza el componente `Grafo`.
+  - `index.tsx`: Archivo principal de la aplicación que renderiza el componente `RecorridoGrafos`.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Tecnologías utilizadas
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- React.js: Biblioteca JavaScript para construir interfaces de usuario.
+- TypeScript: Superset de JavaScript que agrega tipado estático y otras características.
+- Sass: Preprocesador de CSS para mejorar el manejo de estilos.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Licencia
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Este proyecto está bajo la licencia [MIT](https://opensource.org/licenses/MIT).
