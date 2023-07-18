@@ -51,59 +51,75 @@ const Grafo: React.FC = () => {
     nodos.forEach((nodo) => (nodo.nodoVisitado = false));
     aristas.forEach((arista) => (arista.visitado = false));
 
-    
+
   };
 
   const isNodoVisitado = (nodoId: string): boolean => {
     return nodosVisitados.includes(nodoId);
   };
 
+  const handleNuevoRecorrido = () => {
+    setNodosVisitados([]);
+    setNodoActual('');
+    setCostoParcial(0);
+    setCostoTotal(0);
+    setNodoInicial('');
+    setAdyacenteActual(null);
+    setAdyacenteInicial(null);
+  };
+  
   return (
-    <div className="grafo-wrapper">
-      <div className="grafo-contenedor">
-        <svg className="grafo-svg" viewBox="0 0 330 330">
-          {aristas.map((arista, index) => {
-            const nodoInicio = nodos.find((nodo) => nodo.id === arista.nodoActual);
-            const nodoFin = nodos.find((nodo) => nodo.id === arista.nodoLLegada);
-            return (
-              <AristaGrafo
-                key={index}
-                arista={arista}
-                nodoInicioX={nodoInicio?.x || 0}
-                nodoInicioY={nodoInicio?.y || 0}
-                nodoFinX={nodoFin?.x || 0}
-                nodoFinY={nodoFin?.y || 0}
-              />
-            );
-          })}
-          {nodos.map((nodo) => (
-            <NodoGrafo
-              key={nodo.id}
-              nodo={nodo}
-              onClick={handleNodoClick}
-              isNodoVisitado={isNodoVisitado}
-              isNodoActual={nodo.id === nodoActual}
-              isNodoInicial={nodo.id === nodoInicial}
-              nodoInicial={nodoInicial}
-              Adyacente={adyacenteActual}
-              AdyacenteInicial={adyacenteInicial}
-              setAdyacenteInicial={setAdyacenteInicial}
-              setCostoParcial={setCostoParcial}
-              costoTotal={costoTotal}
-              setCostoTotal={setCostoTotal}
+    <div>
+      <div className="grafo-wrapper">
+        <div className="grafo-contenedor">
+          <svg className="grafo-svg" viewBox="0 0 330 330">
+            {aristas.map((arista, index) => {
+              const nodoInicio = nodos.find((nodo) => nodo.id === arista.nodoActual);
+              const nodoFin = nodos.find((nodo) => nodo.id === arista.nodoLLegada);
+              return (
+                <AristaGrafo
+                  key={index}
+                  arista={arista}
+                  nodoInicioX={nodoInicio?.x || 0}
+                  nodoInicioY={nodoInicio?.y || 0}
+                  nodoFinX={nodoFin?.x || 0}
+                  nodoFinY={nodoFin?.y || 0}
+                />
+              );
+            })}
+            {nodos.map((nodo) => (
+              <NodoGrafo
+                key={nodo.id}
+                nodo={nodo}
+                onClick={handleNodoClick}
+                isNodoVisitado={isNodoVisitado}
+                isNodoActual={nodo.id === nodoActual}
+                isNodoInicial={nodo.id === nodoInicial}
+                nodoInicial={nodoInicial}
+                Adyacente={adyacenteActual}
+                AdyacenteInicial={adyacenteInicial}
+                setAdyacenteInicial={setAdyacenteInicial}
+                setCostoParcial={setCostoParcial}
+                costoTotal={costoTotal}
+                setCostoTotal={setCostoTotal}
 
-            />
-          ))}
-        </svg>
+              />
+            ))}
+          </svg>
+        </div>
+        <InformacionGrafo
+          nodoInicial={nodoInicial}
+          nodoActual={nodoActual}
+          nodosVisitados={nodosVisitados}
+          costoParcial={costoParcial}
+          costoTotal={costoTotal}
+        />
       </div>
-      <InformacionGrafo
-        nodoInicial={nodoInicial}
-        nodoActual={nodoActual}
-        nodosVisitados={nodosVisitados}
-        costoParcial={costoParcial}
-        costoTotal={costoTotal}
-      />
+      <div className="contenedor-recorrido-button">
+        <button className="nuevo-recorrido-button" onClick={handleNuevoRecorrido}>Iniciar nuevo recorrido</button>
+      </div>
     </div>
+
   );
 };
 

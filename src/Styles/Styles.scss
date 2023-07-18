@@ -124,6 +124,25 @@
     text-align: start;
     margin-bottom: 10px;
   }
+  .contenedor-recorrido-button{
+    display: flex;
+    justify-content: center;
+
+  }
+  .nuevo-recorrido-button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .nuevo-recorrido-button:hover {
+    background-color: var(--secondary-color);
+  }
   
   @media (max-width: 1200px) {
     .recorrido-titulo {

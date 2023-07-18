@@ -5,6 +5,7 @@ function RecorridoGrafos(): JSX.Element {
     <div>
       <h1 className="recorrido-titulo">Visualizador de Grafo</h1>
       <Grafo />
+      
     </div>
   );
 }
