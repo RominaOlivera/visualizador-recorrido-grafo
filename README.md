@@ -8,7 +8,7 @@ Elige tu ruta: este visualizador gráfico te permite tomar decisiones informadas
 Asegúrate de tener Node.js y npm (Node Package Manager) instalados en tu sistema.
 
 1. Clona este repositorio en tu computadora:
-   git clone https://github.com/RominaOlivera/visualizador-grafos.git
+   git clone https://github.com/RominaOlivera/visualizador-recorrido-grafo.git
 
 2. Navega al directorio del proyecto:
    cd visualizador-grafos
