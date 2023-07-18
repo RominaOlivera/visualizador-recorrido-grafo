@@ -80,12 +80,14 @@
   .arista-label {
     font-size: 11px;
     font-family: 'Roboto', sans-serif;
+    pointer-events: none;
   }
   
   .nodo-label {
     font-size: 12px;
     text-anchor: middle;
     font-family: 'Roboto', sans-serif;
+    pointer-events: none;
   }
   
   .grafo-nodo.inicial {
