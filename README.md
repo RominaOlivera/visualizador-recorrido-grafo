@@ -46,6 +46,5 @@ Asegúrate de tener Node.js y npm (Node Package Manager) instalados en tu sistem
 - TypeScript: Superset de JavaScript que agrega tipado estático y otras características.
 - Sass: Preprocesador de CSS para mejorar el manejo de estilos.
 
-## Licencia
-
-Este proyecto está bajo la licencia [MIT](https://opensource.org/licenses/MIT).
+## Deploy
+La aplicación de Visualizador de Recorrido de Grafo está disponible en línea. Puedes acceder a ella a través del siguiente enlace: https://visualizadordegrafo.vercel.app/
