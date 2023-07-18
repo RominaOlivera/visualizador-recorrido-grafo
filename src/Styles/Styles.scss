@@ -55,7 +55,6 @@
     stroke: #000;
     stroke-width: 2px;
     cursor: pointer;
-    transition: fill 0.3s;
   }
   
   .grafo-nodo.activo {
@@ -138,6 +137,7 @@
     font-size: 16px;
     cursor: pointer;
     margin-top: 20px;
+    margin-bottom: 20px;
   }
   
   .nuevo-recorrido-button:hover {
