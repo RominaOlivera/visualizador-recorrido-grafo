@@ -11,7 +11,7 @@ Asegúrate de tener Node.js y npm (Node Package Manager) instalados en tu sistem
    git clone https://github.com/RominaOlivera/visualizador-recorrido-grafo.git
 
 2. Navega al directorio del proyecto:
-   cd visualizador-grafos
+   cd visualizador-recorrido-grafo
 
 3. Instala las dependencias necesarias:
    npm install
@@ -34,9 +34,9 @@ Asegúrate de tener Node.js y npm (Node Package Manager) instalados en tu sistem
     - `AristaGrafo.tsx`: Componente que representa visualmente una arista en el grafo.
     - `InformacionGrafo.tsx`: Componente que muestra información relevante del recorrido binario.
   - `interfaces/`: 
-      -`interfaces.ts` Archivo donde se definen las interfaces utilizadas para definir la estructura de datos en la aplicación.
-  - `Styles/`:  Este directorio contiene los estilos del proyecto.
-      -`Sryles.scss`: Archivo Sass que contiene los estilos utilizados en la aplicación.
+    -`interfaces.ts` Archivo donde se definen las interfaces utilizadas para definir la estructura de datos en la aplicación.
+  - `Styles/`: Este directorio contiene los estilos del proyecto.
+    -`Sryles.scss`: Archivo Sass que contiene los estilos utilizados en la aplicación.
   - `RecorridoGrafos.tsx`: Componente principal que contiene y renderiza el componente `Grafo`.
   - `index.tsx`: Archivo principal de la aplicación que renderiza el componente `RecorridoGrafos`.
 
