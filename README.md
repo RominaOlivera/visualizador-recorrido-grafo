@@ -28,15 +28,15 @@ Asegúrate de tener Node.js y npm (Node Package Manager) instalados en tu sistem
 ## Estructura del proyecto
 
 - `src/`: Contiene el código fuente de la aplicación.
-  - `components/`: 
+  - `components/`: Carpeta que contiene los componentes de la aplicación.
     - `Grafo.tsx`: Componente que representa visualmente el grafo y maneja la lógica del recorrido.
     - `NodoGrafo.tsx`: Componente que representa visualmente un nodo en el grafo.
     - `AristaGrafo.tsx`: Componente que representa visualmente una arista en el grafo.
     - `InformacionGrafo.tsx`: Componente que muestra información relevante del recorrido binario.
-  - `interfaces/`: 
-    -`interfaces.ts` Archivo donde se definen las interfaces utilizadas para definir la estructura de datos en la aplicación.
-  - `Styles/`: Este directorio contiene los estilos del proyecto.
-    -`Sryles.scss`: Archivo Sass que contiene los estilos utilizados en la aplicación.
+  - `interfaces/`: Carpeta que contiene el archivo de definición de interfaces utilizadas para definir la estructura de datos en la aplicación.
+    - `interfaces.ts`: Archivo donde se definen las interfaces utilizadas en la aplicación.
+  - `styles/`: Carpeta que contiene los estilos del proyecto.
+    - `Styles.scss`: Archivo Sass que contiene los estilos utilizados en la aplicación.
   - `RecorridoGrafos.tsx`: Componente principal que contiene y renderiza el componente `Grafo`.
   - `index.tsx`: Archivo principal de la aplicación que renderiza el componente `RecorridoGrafos`.
 
